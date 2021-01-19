@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando com Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        #my-toast {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="align-items-center p-3 px-md-4 mb-4 bg-white border-bottom shadow-sm">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container m-auto" width="100%">
+                <a class="navbar-brand" href="#">
+                    <img src="img/bootstrap-5.svg" class="img-fluid" width="200px" alt="">
+                </a>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cards">Cards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#listgroups">List Groups</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#table">Table</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form">Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#toast">Toast</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div id="cards" class="my-5 pt-5 text-muted text-center text-small">
+
+        <div class="row">
+
+            <div class="col-12 text-center">
+                <h2>Card em 3 colunas</h2>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card border-white">
+                    <div class="card-header">Coluna #1</div>
+                    <div class="card-body">
+                        <p class="card-text">Algum texto de exemplo rápido para desenvolver
+                            o título do cartão e compor a maior parte do conteúdo do cartão.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card border-white">
+                    <div class="card-header">Coluna #2</div>
+                    <div class="card-body">
+                        <p class="card-text">Algum texto de exemplo rápido para desenvolver
+                            o título do cartão e compor a maior parte do conteúdo do cartão.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 col-md-4">
+                <div class="card border-white">
+                    <div class="card-header">Coluna #3</div>
+                    <div class="card-body">
+                        <p class="card-text">Algum texto de exemplo rápido para desenvolver
+                            o título do cartão e compor a maior parte do conteúdo do cartão.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="listgroups" class="row align-items-start p-3 mb-4 my-5 pt-5 text-muted text-center text-small">
+
+        <div class="row">
+
+            <div class="col-12 text-center">
+                <h2>List Groups em 2 colunas</h2>
+            </div>
+
+            <div class="col">
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                        Primeira coluna
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">Exemplo 1</button>
+                    <button type="button" class="list-group-item list-group-item-action">Exemplo 2</button>
+                    <button type="button" class="list-group-item list-group-item-action">Exemplo 3</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                        Segunda coluna
+                    </button><button type="button" class="list-group-item list-group-item-action">Exemplo 1</button>
+                    <button type="button" class="list-group-item list-group-item-action">Exemplo 2</button>
+                    <button type="button" class="list-group-item list-group-item-action">Exemplo 3</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="table" class="my-5 pt-5 text-muted text-center text-small">
+
+        <div class="row">
+
+            <div class="col-12 text-center">
+                <h2>Tables em 2 colunas</h2>
+            </div>
+
+            <div class="row align-items-start p-3 mb-4">
+
+                <div class="col">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Telefone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Alessandra</td>
+                                <td>ale.canutto@gmail.com</td>
+                                <td>(00)0000-0000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Alessandra</td>
+                                <td>ale.canutto@gmail.com</td>
+                                <td>(00)0000-0000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Alessandra</td>
+                                <td>ale.canutto@gmail.com</td>
+                                <td>(00)0000-0000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Telefone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Alessandra</td>
+                                <td>ale.canutto@gmail.com</td>
+                                <td>(00)0000-0000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Alessandra</td>
+                                <td>ale.canutto@gmail.com</td>
+                                <td>(00)0000-0000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Alessandra</td>
+                                <td>ale.canutto@gmail.com</td>
+                                <td>(00)0000-0000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="form" class="my-5 pt-5 text-muted text-left text-small">
+
+        <div class="row">
+
+            <div class="col-12 text-center">
+                <h2>Form</h2>
+            </div>
+
+            <div class="row align-items-start">
+                <div class="col">
+                    <form class="p-5">
+                        <div class="form-group">
+                            <label for="InputEmail">Email</label>
+                            <input type="email" class="form-control  mb-4">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputRua">Rua</label>
+                            <input type="rua" class="form-control  mb-4">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputBairro">Bairro</label>
+                            <input type="bairro" class="form-control  mb-4">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputCidade">Cidade</label>
+                            <input type="cidade" class="form-control  mb-4">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputEstado">Estado</label>
+                            <input type="estado" class="form-control  mb-4">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="my-5 pt-5 text-muted text-center text-small">
+
+        <div class="row align-items-start p-3 mb-4">
+            <h3 class="text-center mb-4">Toast</h3>
+            <div class="col">
+
+                <div class="toast" id="my-toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small class="text-muted">agora</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Exemplo de toast simples.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+
+        <p>© Copyrigth Alessandra Canuto 2021</p>
+
+    </footer>
+
+    <script>
+        $(document).ready(() => {
+            $("#my-toast").toast("show");
+        });
+    </script>
+
+</body>
+
+</html>
